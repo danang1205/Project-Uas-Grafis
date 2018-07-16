@@ -56,7 +56,7 @@ class Objek {
         glu.gluDisk(q, 0.0f, BODY_RADIUS, SLICES, STACKS);
     }
     static void rangkatengah(GL gl){
-        float BODY_LENGTH=4.0f;
+        float BODY_LENGTH=5.4f;
         float BODY_RADIUS=0.1f;
         GLU glu=new GLU();
         int SLICES=30;
