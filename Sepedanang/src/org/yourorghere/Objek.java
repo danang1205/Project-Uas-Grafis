@@ -421,6 +421,125 @@ public class Objek {
         gl.glEnd();
         gl.glPopMatrix();
 
+     }
+    
+    static void Sadel(GL gl) {
+        float BODY_RADIUS = 0.09f;
+        float BODY_LENGTH = 0.8f;
+
+        int SLICES = 130;
+        int STACKS = 130;
+        GLU glu = new GLU();
+        GLUquadric q = glu.gluNewQuadric();
+
+        gl.glPushMatrix();
+        gl.glColor3d(0.5, 0.5, 0.5);
+        glu.gluCylinder(q, BODY_RADIUS, BODY_RADIUS, BODY_LENGTH, SLICES, STACKS);
+        gl.glPopMatrix();
+
+        gl.glTranslated(0, -0.15, 0);
+        gl.glRotated(-5, 1, 0, 0);
+        gl.glPushMatrix();
+        gl.glColor3d(0, 0, 0);
+        gl.glTranslated(0, 0, 0.75);
+        gl.glBegin(GL.GL_QUADS);
+        gl.glVertex3d(-0.35, 0.0, -0.05);
+        gl.glVertex3d(0.35, 0.0, -0.05);
+        gl.glVertex3d(0.1, 0.75, 0.0);
+        gl.glVertex3d(-0.1, 0.75, 0.0);
+        gl.glEnd();
+        gl.glPopMatrix();
+
+        gl.glPushMatrix();
+        gl.glColor3d(0, 0, 0);
+        gl.glTranslated(0, 0, 0.75);
+        gl.glBegin(GL.GL_QUADS);
+        gl.glVertex3d(-0.35, 0.0, -0.05);
+        gl.glVertex3d(0.35, 0.0, -0.05);
+        gl.glVertex3d(0.2, -0.3, 0.05);
+        gl.glVertex3d(-0.2, -0.3, 0.05);
+        gl.glEnd();
+        gl.glPopMatrix();
+
+        //atas
+        gl.glPushMatrix();
+        gl.glColor3d(0, 0, 0);
+        gl.glTranslated(0, 0, 0.9);
+        gl.glBegin(GL.GL_QUADS);
+        gl.glVertex3d(-0.35, 0.0, 0.0);
+        gl.glVertex3d(0.35, 0.0, 0.0);
+        gl.glVertex3d(0.1, 0.75, -0.05);
+        gl.glVertex3d(-0.1, 0.75, -0.05);
+        gl.glEnd();
+        gl.glPopMatrix();
+
+        gl.glPushMatrix();
+        gl.glColor3d(0, 0, 0);
+        gl.glTranslated(0, 0, 0.9);
+        gl.glBegin(GL.GL_QUADS);
+        gl.glVertex3d(-0.35, 0.0, 0.0);
+        gl.glVertex3d(0.35, 0.0, 0.0);
+        gl.glVertex3d(0.2, -0.3, 0.0);
+        gl.glVertex3d(-0.2, -0.3, 0.0);
+        gl.glEnd();
+        gl.glPopMatrix();
+
+        gl.glPushMatrix(); //kanan 1
+        gl.glColor3d(0, 0, 0);
+        gl.glTranslated(0, 0, 0.9);
+        gl.glBegin(GL.GL_QUADS);
+        gl.glVertex3d(0.35, 0.0, 0.0);
+        gl.glVertex3d(0.1, 0.75, -0.05);
+        gl.glVertex3d(0.1, 0.75, -0.15);
+        gl.glVertex3d(0.35, 0.0, -0.20);
+        gl.glEnd();
+        gl.glPopMatrix();
+
+        gl.glPushMatrix(); //kanan 2
+        gl.glColor3d(0.5, 0, 0);
+        gl.glTranslated(0, 0, 0.9);
+        gl.glBegin(GL.GL_QUADS);
+        gl.glVertex3d(0.35, 0.0, 0.0);
+        gl.glVertex3d(0.2, -0.3, 0.0);
+        gl.glVertex3d(0.2, -0.3, -0.10);
+        gl.glVertex3d(0.35, 0.0, -0.20);
+        gl.glEnd();
+        gl.glPopMatrix();
+
+        gl.glPushMatrix(); //kiri 1
+        gl.glColor3d(0, 0, 0);
+        gl.glTranslated(0, 0, 0.9);
+        gl.glBegin(GL.GL_QUADS);
+        gl.glVertex3d(-0.35, 0.0, 0.0);
+        gl.glVertex3d(-0.1, 0.75, -0.05);
+        gl.glVertex3d(-0.1, 0.75, -0.15);
+        gl.glVertex3d(-0.35, 0.0, -0.20);
+        gl.glEnd();
+        gl.glPopMatrix();
+
+        gl.glPushMatrix(); //kiri 2
+        gl.glColor3d(0.5, 0, 0);
+        gl.glTranslated(0, 0, 0.9);
+        gl.glBegin(GL.GL_QUADS);
+        gl.glVertex3d(-0.35, 0.0, 0.0);
+        gl.glVertex3d(-0.2, -0.3, 0.0);
+        gl.glVertex3d(-0.2, -0.3, -0.10);
+        gl.glVertex3d(-0.35, 0.0, -0.20);
+        gl.glEnd();
+        gl.glPopMatrix();
+
+        gl.glPushMatrix(); //belakang
+        gl.glColor3d(0.5, 0, 0);
+        gl.glTranslated(0, 0, 0.9);
+        gl.glBegin(GL.GL_QUADS);
+        gl.glVertex3d(-0.2, -0.3, 0.0);
+        gl.glVertex3d(0.2, -0.3, 0.0);
+        gl.glVertex3d(0.2, -0.3, -0.10);
+        gl.glVertex3d(-0.2, -0.3, -0.10);
+        gl.glEnd();
+        gl.glPopMatrix();
+
     }
+    
 }
-   
+  
