@@ -541,5 +541,105 @@ public class Objek {
 
     }
     
+   static void Pedal(GL gl) {
+        float BODY_RADIUS = 0.14f;
+        float BODY_LENGTH = 0.7f;
+
+        float BODY_RADIUS2 = 0.1f;
+        float BODY_LENGTH2 = 1.2f;
+
+        float BODY_RADIUS3 = 0.45f;
+        float BODY_LENGTH3 = 0.02f;
+
+        float BODY_RADIUS4 = 0.35f;
+        float BODY_LENGTH4 = 0.02f;
+
+        float BODY_RADIUS5 = 0.25f;
+        float BODY_LENGTH5 = 0.02f;
+
+        int SLICES = 130;
+        int STACKS = 130;
+        GLU glu = new GLU();
+        GLUquadric q = glu.gluNewQuadric();
+
+        gl.glPushMatrix();
+        gl.glColor3d(0, 0, 0);
+        glu.gluCylinder(q, BODY_RADIUS, BODY_RADIUS, BODY_LENGTH, SLICES, STACKS);
+        gl.glColor3d(0, 0, 0);
+        glu.gluDisk(q, 0.0f, BODY_RADIUS, SLICES, STACKS);
+        gl.glTranslatef(0f, 0f, BODY_LENGTH);
+        glu.gluDisk(q, 0.0f, BODY_RADIUS, SLICES, STACKS);
+        gl.glPopMatrix();
+
+        gl.glPushMatrix();
+        gl.glTranslated(0, 0, -0.09);
+        gl.glColor3d(0, 0, 0);
+        glu.gluCylinder(q, 0.1, BODY_RADIUS, 0.1, SLICES, STACKS);
+        gl.glPopMatrix();
+
+        gl.glPushMatrix();// as
+        gl.glTranslated(0, 0, -0.3);
+        gl.glColor3d(0.5, 0.5, 0.5);
+        glu.gluCylinder(q, BODY_RADIUS2, BODY_RADIUS2, BODY_LENGTH2, SLICES, STACKS);
+        gl.glColor3d(0, 0, 0);
+        glu.gluDisk(q, 0.0f, BODY_RADIUS2, SLICES, STACKS);
+        gl.glTranslatef(0f, 0f, BODY_LENGTH2);
+        glu.gluDisk(q, 0.0f, BODY_RADIUS2, SLICES, STACKS);
+        gl.glPopMatrix();
+
+        gl.glPushMatrix();// gir
+        gl.glTranslated(0, 0, 0.65);
+        gl.glColor3d(0, 0, 0);
+        glu.gluCylinder(q, BODY_RADIUS3, BODY_RADIUS3, BODY_LENGTH3, SLICES, STACKS);
+        gl.glColor3d(0.2, 0.2, 0.2);
+        glu.gluDisk(q, 0.0f, BODY_RADIUS3, SLICES, STACKS);
+        gl.glTranslatef(0f, 0f, BODY_LENGTH3);
+        glu.gluDisk(q, 0.0f, BODY_RADIUS3, SLICES, STACKS);
+        gl.glPopMatrix();
+
+        gl.glPushMatrix();// gir2
+        gl.glTranslated(0, 0, 0.62);
+        gl.glColor3d(0, 0, 0);
+        glu.gluCylinder(q, BODY_RADIUS4, BODY_RADIUS4, BODY_LENGTH4, SLICES, STACKS);
+        gl.glColor3d(0.2, 0.2, 0.2);
+        glu.gluDisk(q, 0.0f, BODY_RADIUS4, SLICES, STACKS);
+        gl.glTranslatef(0f, 0f, BODY_LENGTH4);
+        glu.gluDisk(q, 0.0f, BODY_RADIUS4, SLICES, STACKS);
+        gl.glPopMatrix();
+
+        gl.glPushMatrix();// gir3
+        gl.glTranslated(0, 0, 0.59);
+        gl.glColor3d(0, 0, 0);
+        glu.gluCylinder(q, BODY_RADIUS5, BODY_RADIUS5, BODY_LENGTH5, SLICES, STACKS);
+        gl.glColor3d(0.2, 0.2, 0.2);
+        glu.gluDisk(q, 0.0f, BODY_RADIUS5, SLICES, STACKS);
+        gl.glTranslatef(0f, 0f, BODY_LENGTH5);
+        glu.gluDisk(q, 0.0f, BODY_RADIUS5, SLICES, STACKS);
+        gl.glPopMatrix();
+
+        gl.glPushMatrix();//
+        gl.glTranslated(0, 0, 0.78);
+        gl.glRotated(90, 1, 0, 0);
+        gl.glRotated(-5, 1, 0, 0);
+        gl.glColor3d(0.5, 0.5, 0.5);
+        glu.gluCylinder(q, 0.1, 0.05, 0.8, SLICES, STACKS);
+        gl.glColor3d(0.2, 0.2, 0.2);
+        gl.glTranslated(0f, 0f, 0.8);
+        glu.gluDisk(q, 0.0f, 0.05, SLICES, STACKS);
+        gl.glPopMatrix();
+
+        gl.glPushMatrix();//
+        gl.glTranslated(0, 0, -0.18);
+        gl.glRotated(-90, 1, 0, 0);
+        gl.glRotated(-5, 1, 0, 0);
+        gl.glColor3d(0.5, 0.5, 0.5);
+        glu.gluCylinder(q, 0.1, 0.05, 0.8, SLICES, STACKS);
+        gl.glColor3d(0.2, 0.2, 0.2);
+        gl.glTranslated(0f, 0f, 0.8);
+        glu.gluDisk(q, 0.0f, 0.05, SLICES, STACKS);
+        gl.glPopMatrix();
+
+    }
+    
 }
   
