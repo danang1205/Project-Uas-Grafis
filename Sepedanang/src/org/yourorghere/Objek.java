@@ -844,5 +844,262 @@ public class Objek {
         gl.glPopMatrix();
 
     }
+    
+        static void Pijakan(GL gl) {
+        float BODY_RADIUS = 0.04f;
+        float BODY_LENGTH = 0.45f;
+
+        float BODY_RADIUS2 = 0.03f;
+        float BODY_LENGTH2 = 0.3f;
+
+        float BODY_RADIUS3 = 0.45f;
+        float BODY_LENGTH3 = 0.02f;
+
+        float BODY_RADIUS4 = 0.35f;
+        float BODY_LENGTH4 = 0.02f;
+
+        float BODY_RADIUS5 = 0.25f;
+        float BODY_LENGTH5 = 0.02f;
+
+        int SLICES = 130;
+        int STACKS = 130;
+        GLU glu = new GLU();
+        GLUquadric q = glu.gluNewQuadric();
+
+        gl.glPushMatrix();
+        gl.glTranslated(0, 0, -0.07);
+        gl.glColor3d(0, 0, 0);
+        glu.gluCylinder(q, BODY_RADIUS, BODY_RADIUS, BODY_LENGTH, SLICES, STACKS);
+        gl.glColor3d(0, 0, 0);
+        glu.gluDisk(q, 0.0f, BODY_RADIUS, SLICES, STACKS);
+        gl.glTranslatef(0f, 0f, BODY_LENGTH);
+        glu.gluDisk(q, 0.0f, BODY_RADIUS, SLICES, STACKS);
+        gl.glPopMatrix();
+
+        gl.glPushMatrix();
+        gl.glTranslated(0, 0.15, 0.1);
+        gl.glColor3d(0, 0, 0);
+        glu.gluCylinder(q, BODY_RADIUS2, BODY_RADIUS2, BODY_LENGTH2, SLICES, STACKS);
+        gl.glColor3d(0, 0, 0);
+        glu.gluDisk(q, 0.0f, BODY_RADIUS2, SLICES, STACKS);
+        gl.glTranslatef(0f, 0f, BODY_LENGTH2);
+        glu.gluDisk(q, 0.0f, BODY_RADIUS2, SLICES, STACKS);
+        gl.glPopMatrix();
+
+        gl.glPushMatrix();
+        gl.glTranslated(0, -0.15, 0.1);
+        gl.glColor3d(0, 0, 0);
+        glu.gluCylinder(q, BODY_RADIUS2, BODY_RADIUS2, BODY_LENGTH2, SLICES, STACKS);
+        gl.glColor3d(0, 0, 0);
+        glu.gluDisk(q, 0.0f, BODY_RADIUS2, SLICES, STACKS);
+        gl.glTranslatef(0f, 0f, BODY_LENGTH2);
+        glu.gluDisk(q, 0.0f, BODY_RADIUS2, SLICES, STACKS);
+        gl.glPopMatrix();
+
+        gl.glPushMatrix();
+        gl.glColor3d(0.5, 0, 0);
+        gl.glTranslated(0.03, 0.0, 0.17);
+        gl.glRotated(90, 0, 1, 0);
+        gl.glBegin(GL.GL_QUADS);
+        gl.glVertex3d(-0.05, 0.18, 0);
+        gl.glVertex3d(0.05, 0.18, 0);
+        gl.glVertex3d(0.05, -0.18, 0);
+        gl.glVertex3d(-0.05, -0.18, 0);
+        gl.glEnd();
+        gl.glPopMatrix();
+
+        gl.glPushMatrix();
+        gl.glColor3d(0.5, 0, 0);
+        gl.glTranslated(-0.03, 0.0, 0.17);
+        gl.glRotated(90, 0, 1, 0);
+        gl.glBegin(GL.GL_QUADS);
+        gl.glVertex3d(-0.05, 0.18, 0);
+        gl.glVertex3d(0.05, 0.18, 0);
+        gl.glVertex3d(0.05, -0.18, 0);
+        gl.glVertex3d(-0.05, -0.18, 0);
+        gl.glEnd();
+        gl.glPopMatrix();
+
+        gl.glPushMatrix();
+        gl.glColor3d(0.5, 0, 0);
+        gl.glTranslated(0, 0.0, 0.17);
+        gl.glRotated(90, 0, 1, 0);
+        gl.glBegin(GL.GL_QUADS);
+        gl.glVertex3d(0.05, 0.18, 0.03);
+        gl.glVertex3d(0.05, 0.18, -0.03);
+        gl.glVertex3d(0.05, -0.18, -0.03);
+        gl.glVertex3d(0.05, -0.18, 0.03);
+        gl.glEnd();
+        gl.glPopMatrix();
+
+        /////
+        gl.glPushMatrix();
+        gl.glColor3d(0.5, 0, 0);
+        gl.glTranslated(0.03, 0.0, 0.39);
+        gl.glRotated(90, 0, 1, 0);
+        gl.glBegin(GL.GL_QUADS);
+        gl.glVertex3d(-0.05, 0.18, 0);
+        gl.glVertex3d(0.05, 0.18, 0);
+        gl.glVertex3d(0.05, -0.18, 0);
+        gl.glVertex3d(-0.05, -0.18, 0);
+        gl.glEnd();
+        gl.glPopMatrix();
+
+        gl.glPushMatrix();
+        gl.glColor3d(0.5, 0, 0);
+        gl.glTranslated(-0.03, 0.0, 0.39);
+        gl.glRotated(90, 0, 1, 0);
+        gl.glBegin(GL.GL_QUADS);
+        gl.glVertex3d(-0.05, 0.18, 0);
+        gl.glVertex3d(0.05, 0.18, 0);
+        gl.glVertex3d(0.05, -0.18, 0);
+        gl.glVertex3d(-0.05, -0.18, 0);
+        gl.glEnd();
+        gl.glPopMatrix();
+
+        gl.glPushMatrix();
+        gl.glColor3d(0.5, 0, 0);
+        gl.glTranslated(0, 0.0, 0.49);
+        gl.glRotated(90, 0, 1, 0);
+        gl.glBegin(GL.GL_QUADS);
+        gl.glVertex3d(0.05, 0.18, 0.03);
+        gl.glVertex3d(0.05, 0.18, -0.03);
+        gl.glVertex3d(0.05, -0.18, -0.03);
+        gl.glVertex3d(0.05, -0.18, 0.03);
+        gl.glEnd();
+        gl.glPopMatrix();
+
+    }
+
+    static void Pijakan2(GL gl) {
+        gl.glRotated(180, 1, 0, 0);
+        
+        float BODY_RADIUS = 0.04f;//bagian hitam pijakan
+        float BODY_LENGTH = 0.45f;
+
+        float BODY_RADIUS2 = 0.03f;
+        float BODY_LENGTH2 = 0.3f;
+
+        float BODY_RADIUS3 = 0.45f;
+        float BODY_LENGTH3 = 0.02f;
+
+        float BODY_RADIUS4 = 0.35f;
+        float BODY_LENGTH4 = 0.02f;
+
+        float BODY_RADIUS5 = 0.25f;
+        float BODY_LENGTH5 = 0.02f;
+
+        int SLICES = 130;
+        int STACKS = 130;
+        GLU glu = new GLU();
+        GLUquadric q = glu.gluNewQuadric();
+
+        gl.glPushMatrix();//hitam tengah
+        gl.glTranslated(0, 0, -0.07);
+        gl.glColor3d(0, 0, 0);
+        glu.gluCylinder(q, BODY_RADIUS, BODY_RADIUS, BODY_LENGTH, SLICES, STACKS);
+        
+        gl.glColor3d(0, 0, 0);//tutup hitam
+        glu.gluDisk(q, 0.0f, BODY_RADIUS, SLICES, STACKS);
+        gl.glTranslatef(0f, 0f, BODY_LENGTH);
+        glu.gluDisk(q, 0.0f, BODY_RADIUS, SLICES, STACKS);
+        gl.glPopMatrix();
+
+        gl.glPushMatrix();
+        gl.glTranslated(0, 0.15, 0.1);//hitam kiri
+        gl.glColor3d(0, 0, 0);
+        glu.gluCylinder(q, BODY_RADIUS2, BODY_RADIUS2, BODY_LENGTH2, SLICES, STACKS);
+        
+        gl.glColor3d(0, 0, 0);//tutup hitam
+        glu.gluDisk(q, 0.0f, BODY_RADIUS2, SLICES, STACKS);
+        gl.glTranslatef(0f, 0f, BODY_LENGTH2);
+        glu.gluDisk(q, 0.0f, BODY_RADIUS2, SLICES, STACKS);
+        gl.glPopMatrix();
+
+        gl.glPushMatrix();
+        gl.glTranslated(0, -0.15, 0.1);// hitam kanan
+        gl.glColor3d(0, 0, 0);
+        glu.gluCylinder(q, BODY_RADIUS2, BODY_RADIUS2, BODY_LENGTH2, SLICES, STACKS);
+        
+        gl.glColor3d(0, 0, 0);//tutup hitam
+        glu.gluDisk(q, 0.0f, BODY_RADIUS2, SLICES, STACKS);
+        gl.glTranslatef(0f, 0f, BODY_LENGTH2);
+        glu.gluDisk(q, 0.0f, BODY_RADIUS2, SLICES, STACKS);
+        gl.glPopMatrix();
+
+        gl.glPushMatrix();
+        gl.glColor3d(0.5, 0, 0);
+        gl.glTranslated(1.03, 0.0, 0.17);//merah bawah pijakan
+        gl.glRotated(90, 0, 1, 0);
+        gl.glBegin(GL.GL_QUADS);
+        gl.glVertex3d(-0.05, 0.18, 0);
+        gl.glVertex3d(0.05, 0.18, 0);
+        gl.glVertex3d(0.05, -0.18, 0);
+        gl.glVertex3d(-0.05, -0.18, 0);
+        gl.glEnd();
+        gl.glPopMatrix();
+
+        gl.glPushMatrix();
+        gl.glColor3d(0.5, 0, 0);
+        gl.glTranslated(1.03, 0.0, 0.17);//merah bawah 
+        gl.glRotated(90, 0, 1, 0);
+        gl.glBegin(GL.GL_QUADS);
+        gl.glVertex3d(-0.05, 0.18, 0);
+        gl.glVertex3d(0.05, 0.18, 0);
+        gl.glVertex3d(0.05, -0.18, 0);
+        gl.glVertex3d(-0.05, -0.18, 0);
+        gl.glEnd();
+        gl.glPopMatrix();
+
+        gl.glPushMatrix();
+        gl.glColor3d(0.5, 0, 0);
+        gl.glTranslated(0, 0.0, 0.17);//merah bawah
+        gl.glRotated(90, 0, 1, 0);
+        gl.glBegin(GL.GL_QUADS);
+        gl.glVertex3d(0.05, 0.18, 0.03);
+        gl.glVertex3d(0.05, 0.18, -0.03);
+        gl.glVertex3d(0.05, -0.18, -0.03);
+        gl.glVertex3d(0.05, -0.18, 0.03);
+        gl.glEnd();
+        gl.glPopMatrix();
+
+        /////
+        gl.glPushMatrix();
+        gl.glColor3d(0.5, 0, 0);
+        gl.glTranslated(0.03, 0.0, 0.39);
+        gl.glRotated(90, 0, 1, 0);
+        gl.glBegin(GL.GL_QUADS);
+        gl.glVertex3d(-0.05, 0.18, 0);
+        gl.glVertex3d(0.05, 0.18, 0);
+        gl.glVertex3d(0.05, -0.18, 0);
+        gl.glVertex3d(-0.05, -0.18, 0);
+        gl.glEnd();
+        gl.glPopMatrix();
+
+        gl.glPushMatrix();
+        gl.glColor3d(0.5, 0, 0);
+        gl.glTranslated(-0.03, 0.0, 0.39);
+        gl.glRotated(90, 0, 1, 0);
+        gl.glBegin(GL.GL_QUADS);
+        gl.glVertex3d(-0.05, 0.18, 0);
+        gl.glVertex3d(0.05, 0.18, 0);
+        gl.glVertex3d(0.05, -0.18, 0);
+        gl.glVertex3d(-0.05, -0.18, 0);
+        gl.glEnd();
+        gl.glPopMatrix();
+
+        gl.glPushMatrix();
+        gl.glColor3d(0.5, 0, 0);
+        gl.glTranslated(0, 0.0, 0.49);
+        gl.glRotated(90, 0, 1, 0);
+        gl.glBegin(GL.GL_QUADS);
+        gl.glVertex3d(0.05, 0.18, 0.03);
+        gl.glVertex3d(0.05, 0.18, -0.03);
+        gl.glVertex3d(0.05, -0.18, -0.03);
+        gl.glVertex3d(0.05, -0.18, 0.03);
+        gl.glEnd();
+        gl.glPopMatrix();
+
+    }
 
 }
